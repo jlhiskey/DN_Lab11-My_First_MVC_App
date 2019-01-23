@@ -18,7 +18,11 @@ namespace DN_Lab11_My_First_MVC_App.Controllers
         [HttpPost]
         public IActionResult Index(int startYear, int endYear)
         {
-            if(startYear <= endYear)
+            if (startYear == 0 || endYear == 0)
+            {
+                return RedirectToAction("Index");
+            }
+            if (startYear <= endYear)
             {
                 return RedirectToAction("Result", new { startYear, endYear });
             }
@@ -27,7 +31,8 @@ namespace DN_Lab11_My_First_MVC_App.Controllers
                 return RedirectToAction("Index");
             }           
         }
-        
+
+        [HttpGet]
         public IActionResult Result(int startYear, int endYear)
         {
             List<Person> filteredPeople = Person.Search(startYear, endYear);

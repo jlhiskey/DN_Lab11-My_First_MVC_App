@@ -7,7 +7,7 @@
     <main class="results">
         <h1 id="resultTitle">You have @Model.Count results</h1>
         <!--<a href="@Url.Action("Index")">Home</a>-->
-        <a asp-controller="Home" asp-action="Index">Home</a>
+        <a asp-controller="Home" asp-action="Index">Search Again</a>
         <table>
             <tr><th>Name</th><th>Title</th><th>Year</th></tr>
             @foreach (var property in Model)
