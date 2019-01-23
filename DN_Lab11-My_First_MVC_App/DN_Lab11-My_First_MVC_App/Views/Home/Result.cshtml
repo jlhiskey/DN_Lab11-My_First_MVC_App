@@ -1,0 +1,24 @@
+﻿@model List<DN_Lab11_My_First_MVC_App.Models.Person>
+
+<head>
+    @*Style Sheet *@
+</head>
+<body>
+    <main class="results">
+        <h1 id="resultTitle">You have @Model.Count results</h1>
+        <!--<a href="@Url.Action("Index")">Home</a>-->
+        <a asp-controller="Home" asp-action="Index">Home</a>
+        <table>
+            <tr><th>Name</th><th>Title</th><th>Year</th></tr>
+            @foreach (var property in Model)
+            {
+                <tr>
+                    <td>@property.Name</td>
+                    <td>@property.Title</td>
+                    <td>@property.Year</td>
+                </tr>
+            }
+        </table>
+    </main>
+
+</body>

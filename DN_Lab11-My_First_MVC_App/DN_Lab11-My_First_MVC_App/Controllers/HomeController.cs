@@ -8,6 +8,7 @@ namespace DN_Lab11_My_First_MVC_App.Controllers
 {
     public class HomeController : Controller
 {
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
