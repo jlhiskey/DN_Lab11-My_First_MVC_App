@@ -1,12 +1,13 @@
 ﻿<head>
-   @* Style sheet goes here eventually *@
+    <link href="~/StyleSheet.css" rel="stylesheet" />
 </head>
 <body>
     <main class="index">
-        <h1 id="mainTitle">TIME Person of the Year Database</h1>
+        <h1 id="mainTitle">TIME</h1>
+        <h2 id="subTitle"> Person of the Year Database</h2>
         <form method="post">
-            <input type=number min=1927 max=2016 placeholder="Start" id="startYear" name="startYear" />
-            <input type=number min=1927 max=2016 placeholder="End" id="endYear" name="endYear" />
+            <input type=number min=1927 max=2016 placeholder="Start Year" id="startYear" name="startYear" />
+            <input type=number min=1927 max=2016 placeholder="End Year" id="endYear" name="endYear" />
             <button type="submit">Submit</button>
             <h3>Please Select Range of Years You Want Displayed</h3>
         </form>
