@@ -8,19 +8,18 @@
         <h1 id="mainTitle">TIME</h1>
         <h2 id="subTitle"> Person of the Year Database</h2>
         <h3 id="resultTitle">You have @Model.Count results</h3>
-        <!--<a href="@Url.Action("Index")">Home</a>-->
-        <a asp-controller="Home" asp-action="Index">Search Again</a>
         <table align="center">
             <tr><th>Name</th><th>Title</th><th>Year</th></tr>
-            @foreach (var property in Model)
+            @foreach (var person in Model)
             {
                 <tr>
-                    <td>@property.Name</td>
-                    <td>@property.Title</td>
-                    <td>@property.Year</td>
+                    <td>@person.Name</td>
+                    <td>@person.Title</td>
+                    <td>@person.Year</td>
                 </tr>
             }
         </table>
+        <a asp-controller="Home" asp-action="Index">Search Again</a>
     </main>
 
 </body>

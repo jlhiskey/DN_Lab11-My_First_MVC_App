@@ -1,4 +1,8 @@
-﻿main.index {
+﻿body {
+    background-color: lightgray;
+}
+
+main.index {
     border: 7px solid red;
     box-shadow: 5px 5px grey;
     width: 500px;
@@ -50,6 +54,7 @@ table, th, td {
     border-collapse: collapse;
     padding: 15px;
     box-shadow: 2px 2px grey;
+    margin-bottom: 20px;
 }
 
 th {
@@ -57,7 +62,7 @@ th {
 }
 
 table tr:nth-child(even) {
-    background-color: red;
+    background-color: lightgrey;
 }
 
 table tr:nth-child(odd) {
@@ -69,7 +74,7 @@ table tr:nth-child(odd) {
     color: red;
     font-size: 150px;
     font-family: serif;
-    padding: 0px;
+    margin: 0px;
 }
 #subTitle {
     font-size: 30px;
@@ -77,6 +82,7 @@ table tr:nth-child(odd) {
 }
 
 a {
+    padding-top: 20px;
     font-size: 20px;
     color: black;
     padding: 10px;

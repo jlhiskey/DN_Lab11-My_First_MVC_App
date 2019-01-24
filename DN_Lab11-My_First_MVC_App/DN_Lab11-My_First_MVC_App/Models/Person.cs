@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace DN_Lab11_My_First_MVC_App.Models
 {
+    /// <summary>
+    /// A class that is modeled after personOfTheYear.csv internally contains methods that can parse .csv file and will create a list of people. It also contains a method that allows user to search for people using the year that they were person of the year.
+    /// </summary>
     public class Person
     {
         public int Year { get; set; }
@@ -18,6 +21,11 @@ namespace DN_Lab11_My_First_MVC_App.Models
         public string Category { get; set; }
         public string Context { get; set; }
 
+        /// <summary>
+        /// Reads a file and returns an string[] of raw data where each index is a line of that file.
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <returns>string[] rawData</returns>
         public static string[] ReadFile(string filePath)
         {
              
@@ -28,6 +36,11 @@ namespace DN_Lab11_My_First_MVC_App.Models
             return rawData;   
         }
 
+        /// <summary>
+        /// Receives raw data and parses it into a List with all people found within that file.
+        /// </summary>
+        /// <param name="rawData"></param>
+        /// <returns>Returns a list of all of people found within raw data.</returns>
         public static List<Person> AllPeople(string[] rawData)
         {
 
@@ -52,13 +65,26 @@ namespace DN_Lab11_My_First_MVC_App.Models
             }
             return allPeople;
         }
-
+        
+        /// <summary>
+        /// Takes in a list of people and conducts a search within a startYear and endYear and returns a filtered list of people.
+        /// </summary>
+        /// <param name="allPeople"></param>
+        /// <param name="startYear"></param>
+        /// <param name="endYear"></param>
+        /// <returns>filtered list of people</returns>
         public static List<Person> FilteredPeople(List<Person> allPeople, int startYear, int endYear)
         {
             List<Person> filteredPeople = allPeople.Where(p => (p.Year >= startYear) && (p.Year <= endYear)).ToList();
             return filteredPeople;
         }
 
+        /// <summary>
+        /// Master method of people class that combines ReadFile, AllPeople and FilteredPeople and returns a list of filtered people using inputs of startYear and endYear.
+        /// </summary>
+        /// <param name="startYear"></param>
+        /// <param name="endYear"></param>
+        /// <returns>Filtered list of people.</returns>
         public static List<Person> Search(int startYear, int endYear)
         {
             string _filePath = @"wwwroot\personOfTheYear.csv";

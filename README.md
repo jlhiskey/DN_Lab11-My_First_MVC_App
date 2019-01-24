@@ -39,8 +39,20 @@ Your MVC Web Application should contain the following:
 - MVC Setup https://codefellows.github.io/code-401-dotnet-guide/Curriculum/Class11/Resources/MVCSetup.html
 - MVC Tutorial https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-2.2&tabs=visual-studio&viewFallbackFrom=aspnetcore-2.1
 
-## Query Output
+## Example Usage
+### On Page Load
+When the site loads you will see a window explaining the site and at the bottom of the page you will see a form that accepts years between 1927 and 2016.
 
-![solution image](assets/QueryOutput.PNG)    
+![index](assets/index.PNG)    
 
+### Conducting A Query
+Enter in a year between 1927 and 2016 into each field and press submit.
 
+Note: If the second number is less than the first number then you will be reset back to the initial form.
+
+![index](assets/search.PNG) 
+
+### Viewing Results
+After the submit button is pressed you will see a table of results showing the name of the person of the year, that persons titles and the year that they were person of the year. Below the table you will see a Search Again button which when pressed will take you back to the initial form. 
+
+![index](assets/result.PNG) 
