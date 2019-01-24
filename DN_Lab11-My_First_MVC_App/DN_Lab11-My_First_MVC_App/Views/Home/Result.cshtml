@@ -1,0 +1,25 @@
+﻿@model List<DN_Lab11_My_First_MVC_App.Models.Person>
+
+<head>
+    <link href="~/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <main class="results">
+        <h1 id="mainTitle">TIME</h1>
+        <h2 id="subTitle"> Person of the Year Database</h2>
+        <h3 id="resultTitle">You have @Model.Count results</h3>
+        <table align="center">
+            <tr><th>Name</th><th>Title</th><th>Year</th></tr>
+            @foreach (var person in Model)
+            {
+                <tr>
+                    <td>@person.Name</td>
+                    <td>@person.Title</td>
+                    <td>@person.Year</td>
+                </tr>
+            }
+        </table>
+        <a asp-controller="Home" asp-action="Index">Search Again</a>
+    </main>
+
+</body>
